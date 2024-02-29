@@ -3,7 +3,7 @@ input[type="radio"]{
 }
 input[type="radio"]+label{
   border-radius: 100%;
-  margin: 0 5px;
+  margin: 5px;
   width: 45px;
   height: 45px;
   display: flex;
