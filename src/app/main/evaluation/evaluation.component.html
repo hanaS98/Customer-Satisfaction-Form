@@ -1,0 +1,113 @@
+<div class="box" ngModelGroup="evaluation" >
+  <h4 style="margin-bottom: 35px;">تقييم الخدمة</h4>
+  <p style="font-weight: bold;">على مقياس مكون من خمس درجات, حيث أن 1 غير سهل/غير راضي على الإطلاق, 3 محايد و 5 سهل جدا/راضي جدًا  </p>
+  <div class="row" style="margin-top: 25px;margin-bottom: 25px;">
+    <label class="form-label">ماهي درجة سهولة الوصول الى الخدمة ؟</label>
+    <ng-container *ngFor="let items of radioEasyHardOptions">
+      <input
+      type="radio"
+      class="btn-check"
+      value={{items.value}}
+      name="section1Rate"
+      type="radio"
+      [id]="'section1Rate'+items.value"
+      autocomplete="off"
+      ngModel
+      (change)="onChange(items.value)"
+    />
+    <label class="btn  ratingOne" [for]="'section1Rate'+items.value"
+    title={{items.title}}
+    [ngClass]="{
+      ratingOne:items.title === 'غير سهل على الإطلاق',
+      ratingTwo:items.title === 'غير سهل',
+      ratingThree:items.title === 'محايد',
+      ratingFour:items.title === 'سهل ',
+      ratingFive:items.title === 'سهل جدًا',
+      ratingSix:items.title === 'لا ينطبق'}">{{items.value}}</label>
+    </ng-container>
+
+  </div>
+
+  <div class="row" *ngFor="let ratingQ of RatingQuestions;" style="margin-top: 25px;margin-bottom: 25px;">
+    <label for={{ratingQ.section}} class="form-label">{{ratingQ.ques}}</label>
+
+    <ng-container *ngFor="let items of radioSatOptions">
+      <input
+      type="radio"
+      class="btn-check"
+      value={{items.value}}
+      [name]="ratingQ.section+'Rate'"
+      type="radio"
+      [id]="ratingQ.section+'Rate'+items.value"
+      autocomplete="off"
+      ngModel
+      (change)="onChange(items.value)"
+    />
+    <label class="btn" [for]="ratingQ.section+'Rate'+items.value"
+    title={{items.title}}
+    [ngClass]="{
+      ratingOne:items.title === 'غير راضي على الإطلاق',
+      ratingTwo:items.title === 'غير راضي',
+      ratingThree:items.title === 'محايد',
+      ratingFour:items.title === 'راضي',
+      ratingFive:items.title === 'راضي جدا',
+      ratingSix:items.title === 'لا ينطبق'}">{{items.value}}</label>
+    </ng-container>
+
+  </div>
+
+  <div class="row" style="margin-top: 25px;margin-bottom: 25px;">
+    <label for="section8" class="form-label">هل قدمت أي شكوى سابقاً للهيئة؟</label>
+
+    <ng-container *ngFor="let items of radioYesNoOptions">
+      <input
+      type="radio"
+      class="btn-check"
+      value={{items.value}}
+      name="section8Rate"
+      type="radio"
+      [id]="'section8Rate'+items.title"
+      autocomplete="off"
+      ngModel
+      (change)="onChange(items.title)"
+      (click)="complaint=items.title"
+    />
+    <label class="btn" [for]="'section8Rate'+items.title"
+    title={{items.title}}
+    [ngClass]="{
+      ratingOne:items.title === 'لا',
+      ratingFive:items.title === 'نعم'}">{{items.title}}</label>
+    </ng-container>
+  </div>
+
+  <div class="row" style="margin-top: 25px;margin-bottom: 25px;" *ngIf="complaint==='نعم'" >
+    <label for="section8ques" class="form-label">ما هي درجة رضاك عن معالجة الشكوى بشكل مناسب؟</label>
+    <ng-container *ngFor="let items of radioSatOptions">
+      <input
+      type="radio"
+      class="btn-check"
+      value={{items.value}}
+      name="section8RateQues"
+      type="radio"
+      [id]="'section8Rate'+items.value"
+      autocomplete="off"
+      ngModel
+      (change)="onChange(items.value)"
+    />
+    <label class="btn  ratingOne" [for]="'section8Rate'+items.value"
+    title={{items.title}}
+    [ngClass]="{
+      ratingOne:items.title === 'غير راضي على الإطلاق',
+      ratingTwo:items.title === 'غير راضي',
+      ratingThree:items.title === 'محايد',
+      ratingFour:items.title === 'راضي',
+      ratingFive:items.title === 'راضي جدا',
+      ratingSix:items.title === 'لا ينطبق'}">{{items.value}}</label>
+    </ng-container>
+  </div>
+
+  <div class="row" style="margin-top: 25px;margin-bottom: 25px;">
+    <label for="Notes" class="form-label">هل لديك أي ملاحظات او مقترحات ترغب في تقديمها للهيئة بغرض تحسين و تطوير الخدمات المقدمة ؟</label>
+    <textarea class="form-control" id="Notes" name="notes" ngModel #notes="ngModel" rows="3"></textarea>
+  </div>
+</div>

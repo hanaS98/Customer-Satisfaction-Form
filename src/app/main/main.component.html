@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="title" style="margin-top: 50px;">
+    <div class="alert alert-danger" role="alert" style="font-weight: bold;" *ngIf="error">
+      يجب تعبئة جميع الخانات المطلوبة!
+    </div>
+    <h2 style="color: var(--main-color); font-weight: bold;">استبيان رضا المستفيد</h2>
+    <hr>
+  </div>
+
+  <form (ngSubmit)="onSubmit($event)" #f="ngForm">
+    <app-user-info></app-user-info>
+    <app-service-channel></app-service-channel>
+    <app-evaluation></app-evaluation>
+
+    <div style="display: flex;flex-direction: row-reverse;;">
+      <input type="submit" value="ارسال" class="submitbtn" [disabled]="!f.valid">
+    </div>
+
+  </form>
+</div>
+

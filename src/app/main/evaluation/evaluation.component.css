@@ -1,0 +1,132 @@
+input[type="radio"]{
+  width:fit-content;
+}
+input[type="radio"]+label{
+  border-radius: 100%;
+  margin: 0 5px;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+.ratingOne{
+  border: 2px solid #fd5560;
+  color: #fd5560;
+  transition: .2s;
+}
+.ratingOne:hover{
+  color: white;
+  background: #fd5560;
+}
+input[type="radio"]:checked+.ratingOne{
+  border: 2px solid #fd5560;
+  color: white;
+  background: #fd5560;
+  outline: 2px solid #ff9f9f;
+
+}
+
+.ratingTwo{
+  border: 2px solid #fd7b3f;
+  color: #fd7b3f;
+  transition: .2s;
+}
+.ratingTwo:hover{
+  color: white;
+  background: #fd7b3f;
+}
+input[type="radio"]:checked+.ratingTwo{
+  border: 2px solid #fd7b3f;
+  color: white;
+  background: #fd7b3f;
+  outline: 2px solid #ffc0a3;
+
+}
+
+.ratingThree{
+  border: 2px solid #e7b600;
+  color: #e7b600;
+  transition: .2s;
+}
+.ratingThree:hover{
+  color: white;
+  background: #e7b600;
+}
+input[type="radio"]:checked+.ratingThree{
+  border: 2px solid #e7b600;
+  color: white;
+  background: #e7b600;
+  outline: 2px solid #edd786;
+
+}
+
+.ratingFour{
+  border: 2px solid #37a329;
+  color: #37a329;
+  transition: .2s;
+}
+.ratingFour:hover{
+  color: white;
+  background: #37a329;
+}
+input[type="radio"]:checked+.ratingFour{
+  border: 2px solid #37a329;
+  color: white;
+  background: #37a329;
+  outline: 2px solid #c3f1bd;
+
+}
+
+.ratingFive{
+  border: 2px solid #0a7744;
+  color: #0a7744;
+  transition: .2s;
+}
+.ratingFive:hover{
+  color: white;
+  background: #0a7744;
+}
+input[type="radio"]:checked+.ratingFive{
+  border: 2px solid #0a7744;
+  color: white;
+  background: #0a7744;
+  outline: 2px solid #7df5bd;
+
+}
+
+.ratingSix{
+  border: 2px solid #535353;
+  color: #535353;
+  transition: .2s;
+}
+.ratingSix:hover{
+  color: white;
+  background: #535353;
+}
+input[type="radio"]:checked+.ratingSix{
+  border: 2px solid #535353;
+  color: white;
+  background: #535353;
+  outline: 2px solid #c1c1c1;
+
+}
+.k-button-group > .k-button:first-child:not(:only-child){
+  border-end-end-radius: 100%;
+  border-start-end-radius:100%;
+  font-weight: bold;
+  margin-right:0 ;
+}
+.k-button-group .k-button:not(:first-child):not(:last-child){
+  border-start-end-radius: 100%;
+    border-end-end-radius: 100%;
+    border-start-start-radius: 100%;
+    border-end-start-radius:100%;
+    font-weight: bold;
+}
+.k-button-group > .k-button:last-child:not(:only-child){
+  border-start-start-radius: 100%;
+    border-end-start-radius: 100%;
+    font-weight: bold;
+}

@@ -1,0 +1,68 @@
+<div class="box" ngModelGroup="services">
+  <h4 style="margin-bottom: 35px;">الخدمات</h4>
+  <div class="row" style="margin-bottom: 15px;">
+      <div class="container-fluid example-wrapper">
+        <div class="row">
+          <div class="col-lg-4">
+            <label for="service" class="form-label required">اسم الخدمة:</label>
+            <kendo-combobox
+              [data]="dataCategory"
+              placeholder="اختر خدمة..."
+              [(ngModel)]="selectedCategory"
+              textField="category"
+              valueField="categoryId"
+              (valueChange)="handleCategoryChange($event)"
+              id="service"
+              [size]="selectedSize"
+              name="service"
+              #service="ngModel"
+              required
+
+            >
+            </kendo-combobox>
+
+            <small *ngIf="service.invalid && service.touched">يرجى إختيار خدمة</small>
+          </div>
+          <div class="col-lg-4">
+            <label for="subService" class="form-label required">الخدمة الفرعية:</label>
+            <kendo-multiselect
+              [disabled]="isDisabledProducts"
+                [data]="dataResultProducts"
+                [(ngModel)]="selectedProduct"
+                textField="productName"
+                valueField="productId"
+                [checkboxes]="true"
+                [autoClose]="false"
+                id="subService"
+                [size]="selectedSize"
+                (valueChange)="handleProductChange($event)"
+                name="subService"
+                #subService="ngModel"
+                required
+              ></kendo-multiselect>
+              <small *ngIf="subService.invalid && subService.touched">يرجى إختيار خدمة</small>
+          </div>
+
+          <div class="col-lg-4" *ngIf="selectedProduct">
+            <div *ngFor="let ele of selectedProduct" >
+              <div *ngIf="ele.productName === 'اخرى'">
+                <label for="otherSubServices" class="form-label">اخرى</label>
+                <input
+                type="text"
+                class="form-control"
+                id="otherSubServices"
+                name="otherSubServices"
+                ngModel
+                #otherSubServices="ngModel">
+              </div>
+            </div>
+
+          </div>
+
+
+        </div>
+      </div>
+
+  </div>
+
+</div>
