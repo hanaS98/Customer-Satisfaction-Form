@@ -1,5 +1,5 @@
 <div class="box" style="margin-top: 35px;" ngModelGroup="userInformation">
-  <h4 style="margin-bottom: 35px;">بيانات المستخدم</h4>
+  <h4 style="margin-bottom: 35px;">بيانات المستفيد</h4>
 
   <div class="row" style="margin-bottom: 15px;">
     <div class="col-lg-6">
@@ -11,8 +11,7 @@
       ngModel
       name="name"
       #name="ngModel"
-      placeholder="هناء سعيد"
-      disabled>
+      >
     </div>
 
     <div class="col-lg-6">
@@ -25,13 +24,13 @@
       name="email"
       #email="ngModel"
       placeholder="example@mail.com"
-      disabled>
+      >
     </div>
   </div>
 
   <div class="row" style="margin-bottom: 15px;">
     <div class="col-lg-6">
-      <label for="phone" class="form-label required">رقم التواصل</label>
+      <label for="phone" class="form-label">رقم التواصل</label>
       <input
       type="text"
       class="form-control"
@@ -39,8 +38,8 @@
       ngModel
       name="phone"
       #phone="ngModel"
-      required>
-      <small *ngIf="phone.invalid && phone.touched">يرجى إدخال رقم للتواصل</small>
+      >
+      <!-- <small *ngIf="phone.invalid && phone.touched">يرجى إدخال رقم للتواصل</small> -->
     </div>
 
     <div class="col-lg-6">

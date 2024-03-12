@@ -21,31 +21,31 @@ export class EvaluationComponent {
     ques:string
   }>=[
     {
-      section:"Section2",
+      section:"section2",
       ques:"ماهي درجة رضاك عن الخدمة بشكل عام ؟"
     },
     {
-      section:"Section3",
+      section:"section3",
       ques:"ماهي درجة رضاك عن  أداء تنفيذ الموظف الفني للخدمة المقدمة لك بشكل عام ؟"
     },
     {
-      section:"Section4",
+      section:"section4",
       ques:"ماهي درجة رضاك عن وقت  تنفيذ الخدمة المقدمة لك ؟"
     },
     {
-      section:"Section5",
+      section:"section5",
       ques:"ماهي درجة رضاك عن أداء موظف خدمة العملاء بمركز الاعمال الذي قام  بتقديم الخدمة لك ؟"
     },
     {
-      section:"Section6",
+      section:"section6",
       ques:"ماهي درجة رضاك عن المدة الزمنية المستغرقة للرد على طلب الخدمة من مركز الاعمال (تقديم طلب الحصول على الخدمة) ؟"
     },
     {
-      section:"Section7",
+      section:"section7",
       ques:"ماهي درجة رضاك عن الرسوم المخصصة للخدمة ( في حال كانت الخدمة مجانية اختر الرقم 6 خدمة مجانية) ؟ "
     },
     {
-      section:"Section9",
+      section:"section9",
       ques:"ماهي درجة رضاك عن خدمات الهيئة بشكل عام ؟ "
     },
 
@@ -108,12 +108,12 @@ export class EvaluationComponent {
   radioYesNoOptions=[
     {
       id:'Yes',
-      value:"1",
+      value:true,
       title:"نعم"
     },
     {
       id:'No',
-      value:"2",
+      value:false,
       title:"لا"
     },
   ]

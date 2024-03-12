@@ -27,7 +27,7 @@
   position: absolute;
   content: "*";
   color: red;
-  width: 100%;
+  width: fit-content;
   height: 100%;
 }
 small{

@@ -10,9 +10,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RTL } from "@progress/kendo-angular-l10n";
 import { DropDownsModule } from "@progress/kendo-angular-dropdowns";
 import { LabelModule } from "@progress/kendo-angular-label";
-
+import { DialogsModule } from "@progress/kendo-angular-dialog";
 import { BrowserModule } from "@angular/platform-browser";
 import { UploadsModule } from "@progress/kendo-angular-upload";
+import { HttpClientModule } from '@angular/common/http';
 
 import { InputsModule } from "@progress/kendo-angular-inputs";
 import { ButtonsModule } from "@progress/kendo-angular-buttons";
@@ -46,6 +47,8 @@ import { UserInfoComponent } from './main/user-info/user-info.component';
     InputsModule,
     UploadsModule,
     ButtonsModule,
+    DialogsModule,
+    HttpClientModule,
   ],
   providers: [{ provide: RTL, useValue: true }],
   bootstrap: [AppComponent]

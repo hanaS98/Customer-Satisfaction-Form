@@ -2,7 +2,7 @@
   <h4 style="margin-bottom: 35px;">تقييم الخدمة</h4>
   <p style="font-weight: bold;">على مقياس مكون من خمس درجات, حيث أن 1 غير سهل/غير راضي على الإطلاق, 3 محايد و 5 سهل جدا/راضي جدًا  </p>
   <div class="row" style="margin-top: 25px;margin-bottom: 25px;">
-    <label class="form-label">ماهي درجة سهولة الوصول الى الخدمة ؟</label>
+    <label class="form-label required">ماهي درجة سهولة الوصول الى الخدمة ؟</label>
     <ng-container *ngFor="let items of radioEasyHardOptions">
       <input
       type="radio"
@@ -29,7 +29,7 @@
   </div>
 
   <div class="row" *ngFor="let ratingQ of RatingQuestions;" style="margin-top: 25px;margin-bottom: 25px;">
-    <label for={{ratingQ.section}} class="form-label">{{ratingQ.ques}}</label>
+    <label for={{ratingQ.section}} class="form-label required">{{ratingQ.ques}}</label>
 
     <ng-container *ngFor="let items of radioSatOptions">
       <input
@@ -57,14 +57,14 @@
   </div>
 
   <div class="row" style="margin-top: 25px;margin-bottom: 25px;">
-    <label for="section8" class="form-label">هل قدمت أي شكوى سابقاً للهيئة؟</label>
+    <label for="section8" class="form-label required">هل قدمت أي شكوى سابقاً للهيئة؟</label>
 
     <ng-container *ngFor="let items of radioYesNoOptions">
       <input
       type="radio"
       class="btn-check"
       value={{items.value}}
-      name="section8Rate"
+      name="section8RateYesNo"
       type="radio"
       [id]="'section8Rate'+items.title"
       autocomplete="off"
@@ -81,20 +81,20 @@
   </div>
 
   <div class="row" style="margin-top: 25px;margin-bottom: 25px;" *ngIf="complaint==='نعم'" >
-    <label for="section8ques" class="form-label">ما هي درجة رضاك عن معالجة الشكوى بشكل مناسب؟</label>
+    <label for="section8ques" class="form-label required">ما هي درجة رضاك عن معالجة الشكوى بشكل مناسب؟</label>
     <ng-container *ngFor="let items of radioSatOptions">
       <input
       type="radio"
       class="btn-check"
       value={{items.value}}
-      name="section8RateQues"
+      name="section8Rate"
       type="radio"
       [id]="'section8Rate'+items.value"
       autocomplete="off"
       ngModel
       (change)="onChange(items.value)"
     />
-    <label class="btn  ratingOne" [for]="'section8Rate'+items.value"
+    <label class="btn" [for]="'section8Rate'+items.value"
     title={{items.title}}
     [ngClass]="{
       ratingOne:items.title === 'غير راضي على الإطلاق',
@@ -102,7 +102,7 @@
       ratingThree:items.title === 'محايد',
       ratingFour:items.title === 'راضي',
       ratingFive:items.title === 'راضي جدا',
-      ratingSix:items.title === 'لا ينطبق'}">{{items.value}}</label>
+      ratingSix:items.title === 'لا ينطبق'}" >{{items.value}}</label>
     </ng-container>
   </div>
 
