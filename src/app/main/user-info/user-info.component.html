@@ -3,7 +3,7 @@
 
   <div class="row" style="margin-bottom: 15px;">
     <div class="col-lg-6">
-      <label for="name" class="form-label">الاسم</label>
+      <label for="name" class="form-label fw-bold">الاسم</label>
       <input
       type="text"
       class="form-control"
@@ -11,11 +11,12 @@
       ngModel
       name="name"
       #name="ngModel"
+      style="border-color: #c0c0c0;"
       >
     </div>
 
     <div class="col-lg-6">
-      <label for="email" class="form-label">البريد الإلكتروني</label>
+      <label for="email" class="form-label fw-bold">البريد الإلكتروني</label>
       <input
       type="text"
       class="form-control"
@@ -24,13 +25,14 @@
       name="email"
       #email="ngModel"
       placeholder="example@mail.com"
+      style="border-color: #c0c0c0;"
       >
     </div>
   </div>
 
   <div class="row" style="margin-bottom: 15px;">
     <div class="col-lg-6">
-      <label for="phone" class="form-label">رقم التواصل</label>
+      <label for="phone" class="form-label fw-bold">رقم التواصل</label>
       <input
       type="text"
       class="form-control"
@@ -38,19 +40,22 @@
       ngModel
       name="phone"
       #phone="ngModel"
+      style="border-color: #c0c0c0;"
       >
       <!-- <small *ngIf="phone.invalid && phone.touched">يرجى إدخال رقم للتواصل</small> -->
     </div>
 
     <div class="col-lg-6">
-      <label for="company" class="form-label">اسم الشركة(إن وجد)</label>
+      <label for="company" class="form-label fw-bold">اسم الشركة(إن وجد)</label>
       <input
       type="text"
       class="form-control"
       id="company"
       ngModel
       name="company"
-      #company="ngModel">
+      #company="ngModel"
+      style="border-color: #c0c0c0;"
+      >
     </div>
   </div>
 </div>

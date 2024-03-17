@@ -4,7 +4,7 @@
       <div class="container-fluid example-wrapper">
         <div class="row">
           <div class="col-lg-4">
-            <label for="service" class="form-label required">اسم الخدمة:</label>
+            <label for="service" class="form-label required fw-bold">اسم الخدمة:</label>
             <kendo-combobox
               [data]="dataCategory"
               placeholder="اختر خدمة..."
@@ -17,14 +17,14 @@
               name="service"
               #service="ngModel"
               required
-
+              style="border-color: #c0c0c0;"
             >
             </kendo-combobox>
 
             <small *ngIf="service.invalid && service.touched">يرجى إختيار خدمة</small>
           </div>
           <div class="col-lg-4">
-            <label for="subService" class="form-label required">الخدمة الفرعية:</label>
+            <label for="subService" class="form-label required fw-bold">الخدمة الفرعية:</label>
             <kendo-multiselect
               [disabled]="isDisabledProducts"
                 [data]="dataResultProducts"
@@ -39,6 +39,7 @@
                 name="subService"
                 #subService="ngModel"
                 required
+                style="border-color: #c0c0c0;"
               ></kendo-multiselect>
               <small *ngIf="subService.invalid && subService.touched">يرجى إختيار خدمة</small>
           </div>

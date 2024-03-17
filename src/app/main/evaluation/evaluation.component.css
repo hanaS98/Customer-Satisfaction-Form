@@ -12,7 +12,7 @@ input[type="radio"]+label{
   font-weight: bold;
 }
 .ratingOne{
-  border: 2px solid #fd5560;
+  
   color: #fd5560;
   transition: .2s;
 }
@@ -21,15 +21,14 @@ input[type="radio"]+label{
   background: #fd5560;
 }
 input[type="radio"]:checked+.ratingOne{
-  border: 2px solid #fd5560;
   color: white;
   background: #fd5560;
-  outline: 2px solid #ff9f9f;
+  
 
 }
 
 .ratingTwo{
-  border: 2px solid #fd7b3f;
+  
   color: #fd7b3f;
   transition: .2s;
 }
@@ -38,15 +37,15 @@ input[type="radio"]:checked+.ratingOne{
   background: #fd7b3f;
 }
 input[type="radio"]:checked+.ratingTwo{
-  border: 2px solid #fd7b3f;
+  
   color: white;
   background: #fd7b3f;
-  outline: 2px solid #ffc0a3;
+  
 
 }
 
 .ratingThree{
-  border: 2px solid #e7b600;
+  
   color: #e7b600;
   transition: .2s;
 }
@@ -55,15 +54,15 @@ input[type="radio"]:checked+.ratingTwo{
   background: #e7b600;
 }
 input[type="radio"]:checked+.ratingThree{
-  border: 2px solid #e7b600;
+  
   color: white;
   background: #e7b600;
-  outline: 2px solid #edd786;
+  
 
 }
 
 .ratingFour{
-  border: 2px solid #37a329;
+  
   color: #37a329;
   transition: .2s;
 }
@@ -72,15 +71,15 @@ input[type="radio"]:checked+.ratingThree{
   background: #37a329;
 }
 input[type="radio"]:checked+.ratingFour{
-  border: 2px solid #37a329;
+  
   color: white;
   background: #37a329;
-  outline: 2px solid #c3f1bd;
+  
 
 }
 
 .ratingFive{
-  border: 2px solid #0a7744;
+ 
   color: #0a7744;
   transition: .2s;
 }
@@ -89,27 +88,27 @@ input[type="radio"]:checked+.ratingFour{
   background: #0a7744;
 }
 input[type="radio"]:checked+.ratingFive{
-  border: 2px solid #0a7744;
+  
   color: white;
   background: #0a7744;
-  outline: 2px solid #7df5bd;
+  
 
 }
 
 .ratingSix{
-  border: 2px solid #535353;
-  color: #535353;
+  
+  color: #a8a8a8;
   transition: .2s;
 }
 .ratingSix:hover{
   color: white;
-  background: #535353;
+  background: #a8a8a8;
 }
 input[type="radio"]:checked+.ratingSix{
-  border: 2px solid #535353;
+  
   color: white;
-  background: #535353;
-  outline: 2px solid #c1c1c1;
+  background: #a8a8a8;
+  
 
 }
 .k-button-group > .k-button:first-child:not(:only-child){

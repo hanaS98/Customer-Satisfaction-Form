@@ -54,54 +54,67 @@ export class EvaluationComponent {
   radioEasyHardOptions=[
     {
       value:"1",
-      title:"غير سهل على الإطلاق"
+      title:"غير سهل على الإطلاق",
+      icon:"fa-light fa-face-pensive fa-2xl"
     },
     {
       value:"2",
-      title:"غير سهل"
+      title:"غير سهل",
+      icon:"fa-light fa-face-frown-slight fa-2xl"
     },
     {
       value:"3",
-      title:"محايد"
+      title:"محايد",
+      icon:"fa-light fa-face-meh fa-2xl"
     },
     {
       value:"4",
-      title:"سهل "
+      title:"سهل ",
+      icon:"fa-light fa-face-smile fa-2xl"
     },
     {
       value:"5",
-      title:"سهل جدًا"
+      title:"سهل جدًا",
+      icon:"fa-light fa-face-laugh-beam fa-2xl"
     },
     {
       value:"6",
-      title:"لا ينطبق"
+      title:"لا ينطبق",
+      icon:"fs-sharp fa-light fa-face-meh-blank fa-2xl"
     },
   ]
 
   radioSatOptions=[
     {
       value:"1",
-      title:"غير راضي على الإطلاق"
+      title:"غير راضي على الإطلاق",
+      icon:"fa-light fa-face-pensive fa-2xl"
     },
     {
       value:"2",
-      title:"غير راضي"
+      title:"غير راضي",
+      icon:"fa-light fa-face-frown-slight fa-2xl"
     },
     {
       value:"3",
-      title:"محايد"
+      title:"محايد",
+      icon:"fa-light fa-face-meh fa-2xl"
     },
     {
       value:"4",
-      title:"راضي"
+      title:"راضي",
+      icon:"fa-light fa-face-smile fa-2xl"
     },
     {
       value:"5",
-      title:"راضي جدا"
+      title:"راضي جدا",
+      icon:"fa-light fa-face-laugh-beam fa-2xl"
     },
     {
       value:"6",
-      title:"لا ينطبق"
+      title:"لا ينطبق",
+      icon:"fs-sharp fa-light fa-face-meh-blank fa-2xl"
+
     },
   ]
 
@@ -109,12 +122,14 @@ export class EvaluationComponent {
     {
       id:'Yes',
       value:true,
-      title:"نعم"
+      title:"نعم",
+      icon:"fa-light fa-check fa-2xl"
     },
     {
       id:'No',
       value:false,
-      title:"لا"
+      title:"لا",
+      icon:"fa-light fa-xmark fa-2xl"
     },
   ]
 

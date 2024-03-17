@@ -1,9 +1,12 @@
 <div class="box" ngModelGroup="evaluation" >
   <h4 style="margin-bottom: 35px;">تقييم الخدمة</h4>
-  <p style="font-weight: bold;">على مقياس مكون من خمس درجات, حيث أن 1 غير سهل/غير راضي على الإطلاق, 3 محايد و 5 سهل جدا/راضي جدًا  </p>
-  <div class="row" style="margin-top: 25px;margin-bottom: 25px;">
-    <label class="form-label required">ماهي درجة سهولة الوصول الى الخدمة ؟</label>
-    <ng-container *ngFor="let items of radioEasyHardOptions">
+  <p style="font-weight: bold;">على مقياس مكون من خمس درجات, حيث أن
+    <span style="color: #fd5560;"> 1 غير سهل على الإطلاق / غير راضي على الإطلاق</span>
+     , <span style="color:#e7b600">3 محايد </span>,
+      <span style="color:#0a7744"> 5 سهل جدا / راضي جدًا </span>  </p>
+  <div class="row" style="margin-top: 35px;margin-bottom: 35px;padding: 10px; background-color: rgba(238, 238, 238, 0.548); border: 1px solid #a1a1a1; border-radius: 10px; ">
+    <label class="form-label required fs-5 fw-bold" style="margin-top: 15px; margin-bottom: 15px;">ماهي درجة سهولة الوصول الى الخدمة ؟</label>
+    <ng-container *ngFor="let items of radioEasyHardOptions" class="position-absolute top-50 start-50 translate-middle">
       <input
       type="radio"
       class="btn-check"
@@ -15,7 +18,7 @@
       ngModel
       (change)="onChange(items.value)"
     />
-    <label class="btn  ratingOne" [for]="'section1Rate'+items.value"
+    <label class="btn  ratingOne m-2" [for]="'section1Rate'+items.value"
     title={{items.title}}
     [ngClass]="{
       ratingOne:items.title === 'غير سهل على الإطلاق',
@@ -23,13 +26,13 @@
       ratingThree:items.title === 'محايد',
       ratingFour:items.title === 'سهل ',
       ratingFive:items.title === 'سهل جدًا',
-      ratingSix:items.title === 'لا ينطبق'}">{{items.value}}</label>
+      ratingSix:items.title === 'لا ينطبق'}"><i [ngClass]="items.icon"></i></label>
     </ng-container>
-
+    
   </div>
 
-  <div class="row" *ngFor="let ratingQ of RatingQuestions;" style="margin-top: 25px;margin-bottom: 25px;">
-    <label for={{ratingQ.section}} class="form-label required">{{ratingQ.ques}}</label>
+  <div class="row" *ngFor="let ratingQ of RatingQuestions;" style="margin-top: 35px;margin-bottom: 35px;padding: 10px; background-color: rgba(238, 238, 238, 0.548); border: 1px solid #a1a1a1; border-radius: 10px; ">
+    <label for={{ratingQ.section}} class="form-label required fs-5 fw-bold" style="margin-top: 15px; margin-bottom: 15px;">{{ratingQ.ques}}</label>
 
     <ng-container *ngFor="let items of radioSatOptions">
       <input
@@ -43,7 +46,7 @@
       ngModel
       (change)="onChange(items.value)"
     />
-    <label class="btn" [for]="ratingQ.section+'Rate'+items.value"
+    <label class="btn  m-2" [for]="ratingQ.section+'Rate'+items.value"
     title={{items.title}}
     [ngClass]="{
       ratingOne:items.title === 'غير راضي على الإطلاق',
@@ -51,13 +54,12 @@
       ratingThree:items.title === 'محايد',
       ratingFour:items.title === 'راضي',
       ratingFive:items.title === 'راضي جدا',
-      ratingSix:items.title === 'لا ينطبق'}">{{items.value}}</label>
+      ratingSix:items.title === 'لا ينطبق'}"><i [ngClass]="items.icon"></i></label>
     </ng-container>
-
   </div>
 
-  <div class="row" style="margin-top: 25px;margin-bottom: 25px;">
-    <label for="section8" class="form-label required">هل قدمت أي شكوى سابقاً للهيئة؟</label>
+  <div class="row" style="margin-top: 35px;margin-bottom: 35px;padding: 10px; background-color: rgba(238, 238, 238, 0.548); border: 1px solid #a1a1a1; border-radius: 10px; ">
+    <label for="section8" class="form-label required fs-5 fw-bold">هل قدمت أي شكوى سابقاً للهيئة؟</label>
 
     <ng-container *ngFor="let items of radioYesNoOptions">
       <input
@@ -72,16 +74,16 @@
       (change)="onChange(items.title)"
       (click)="complaint=items.title"
     />
-    <label class="btn" [for]="'section8Rate'+items.title"
+    <label class="btn  m-2" [for]="'section8Rate'+items.title"
     title={{items.title}}
     [ngClass]="{
       ratingOne:items.title === 'لا',
-      ratingFive:items.title === 'نعم'}">{{items.title}}</label>
+      ratingFive:items.title === 'نعم'}"><i [ngClass]="items.icon"></i></label>
     </ng-container>
   </div>
 
-  <div class="row" style="margin-top: 25px;margin-bottom: 25px;" *ngIf="complaint==='نعم'" >
-    <label for="section8ques" class="form-label required">ما هي درجة رضاك عن معالجة الشكوى بشكل مناسب؟</label>
+  <div class="row" style="margin-top: 35px;margin-bottom: 35px;padding: 10px; background-color: rgba(238, 238, 238, 0.548); border: 1px solid #a1a1a1; border-radius: 10px; " *ngIf="complaint==='نعم'" >
+    <label for="section8ques" class="form-label required fs-5 fw-bold" style="margin-top: 15px; margin-bottom: 15px;">ما هي درجة رضاك عن معالجة الشكوى بشكل مناسب؟</label>
     <ng-container *ngFor="let items of radioSatOptions">
       <input
       type="radio"
@@ -94,7 +96,7 @@
       ngModel
       (change)="onChange(items.value)"
     />
-    <label class="btn" [for]="'section8Rate'+items.value"
+    <label class="btn m-2" [for]="'section8Rate'+items.value"
     title={{items.title}}
     [ngClass]="{
       ratingOne:items.title === 'غير راضي على الإطلاق',
@@ -102,12 +104,12 @@
       ratingThree:items.title === 'محايد',
       ratingFour:items.title === 'راضي',
       ratingFive:items.title === 'راضي جدا',
-      ratingSix:items.title === 'لا ينطبق'}" >{{items.value}}</label>
+      ratingSix:items.title === 'لا ينطبق'}" ><i [ngClass]="items.icon"></i></label>
     </ng-container>
   </div>
 
   <div class="row" style="margin-top: 25px;margin-bottom: 25px;">
-    <label for="Notes" class="form-label">هل لديك أي ملاحظات او مقترحات ترغب في تقديمها للهيئة بغرض تحسين و تطوير الخدمات المقدمة ؟</label>
-    <textarea class="form-control" id="Notes" name="notes" ngModel #notes="ngModel" rows="3"></textarea>
+    <label for="Notes" class="form-label fs-6 fw-bold" style="margin-top: 15px; margin-bottom: 15px;">هل لديك أي ملاحظات او مقترحات ترغب في تقديمها للهيئة بغرض تحسين و تطوير الخدمات المقدمة ؟</label>
+    <textarea style="border-color:#a1a1a1 ; background-color: rgba(238, 238, 238, 0.548) ; border-radius: 10px;" class="form-control" id="Notes" name="notes" ngModel #notes="ngModel" rows="4"></textarea>
   </div>
 </div>
